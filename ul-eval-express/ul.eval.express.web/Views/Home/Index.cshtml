@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Evaluate";
+}
+
+<div ng-controller="mainController">
+
+    <div class="row">
+        <div class="col">
+            <h1 class="light-heading">Evaluate Expression</h1>
+            <p>
+                Please insert expression using only
+                <span class="operator">+</span>
+                <span class="operator">-</span>
+                <span class="operator">/</span>
+                <span class="operator">*</span> operators<br />
+                and non-negative integers only.
+            </p>
+        </div>
+        <div class="col">
+            <h1 class="light-heading">Result</h1>
+            <h1>{{evaluatedResult}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form ng-submit="sendForEvaluation()">
+                <label>Expression to Evaluate</label>
+                <input class="form-control" type="text" ng-model="expression" required>
+                <div style="margin-top: 10px;">
+                    <button class="btn btn-primary" type="submit">Send for Evaluation</button>
+                    <button class="btn btn-light float-right" type="button" ng-click="clear()">Clear</button>
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <label>Evaluated Expression (server-side cleaned)</label>
+            <input type="text" class="form-control" value="{{evaluatedExpression}}" readonly />
+        </div>
+    </div>
+
+</div>

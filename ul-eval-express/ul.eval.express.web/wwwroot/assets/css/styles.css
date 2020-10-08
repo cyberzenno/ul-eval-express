@@ -1,0 +1,18 @@
+.light-heading {
+  color: #c3c3c3;
+}
+
+.operator {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  text-align: center;
+  line-height: 0;
+  padding-top: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: #d3d3d3;
+  color: #484848;
+  font-weight: bold;
+}
+
